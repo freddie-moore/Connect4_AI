@@ -1,0 +1,9 @@
+Connect 4 , 1 player AI
+
+This programme utilises the pygame and copy libraries in order to create a fully working Connect 4 programme against an AI that works based off of the minimax algoritmh (https://www.youtube.com/watch?v=l-hh51ncgDI&t=238s).
+
+The algorithm is competent and designed to restrict it's opposing players movements whilst creating opportunities for future progression. I currently have the algorithm set to what I believe to be a easy/medium difficulty. The algorithm can be improved by increasing the depth parameter when the minimax() function is initially called. Most systems will struggle to deliver a suitable response time passed a depth of 6. Alpha-beta pruning will need to be implemented to surpass this limiting factor.
+
+This programme can very easily be modified into a two player game, I have designed it modularly so that no new functions will need to be written and is simply a case of deleting the block of code that calls the minimax algorithm.
+
+Another factor you may wish to change is how I have evaluated the board, this function returns a value used by the minimax algorithm to determine which moves to make. I decided to have the function prioritise moves which will get the most amount of pieces in one row (horizontal, diagonal or vertical). Any tiebreakers are settled by the square of however many other rows that move may build. Squaring the number ensures that one row of 3 pieces is considered more valuable than two rows of 2 pieces. However there are many other ways to evaluate the board and all various approaches make the algorithm behave differently.
